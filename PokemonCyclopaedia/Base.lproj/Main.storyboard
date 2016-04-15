@@ -4,6 +4,11 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="PokemonSolid.ttf">
+            <string>PokemonSolidNormal</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -22,8 +27,33 @@
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bap-HI-QBB">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PokemonCyclopaedia!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhT-Q8-sIj">
+                                        <rect key="frame" x="34" y="15" width="307" height="35"/>
+                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="21"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jsw-AF-uRE">
+                                        <rect key="frame" x="337" y="18" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="MGY-aD-IBM"/>
+                                            <constraint firstAttribute="height" constant="30" id="Xoj-Xq-mTa"/>
+                                        </constraints>
+                                        <state key="normal" image="musicButton"/>
+                                        <connections>
+                                            <action selector="musicBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uwc-7b-uC2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="lhT-Q8-sIj" firstAttribute="leading" secondItem="bap-HI-QBB" secondAttribute="leading" constant="34" id="7Cj-5o-1PX"/>
+                                    <constraint firstItem="lhT-Q8-sIj" firstAttribute="top" secondItem="bap-HI-QBB" secondAttribute="top" constant="15" id="97Y-Hu-MMM"/>
+                                    <constraint firstAttribute="trailing" secondItem="Jsw-AF-uRE" secondAttribute="trailing" constant="8" id="B7a-X9-AaE"/>
+                                    <constraint firstAttribute="bottom" secondItem="lhT-Q8-sIj" secondAttribute="bottom" id="f11-ED-ns6"/>
+                                    <constraint firstItem="Jsw-AF-uRE" firstAttribute="top" secondItem="bap-HI-QBB" secondAttribute="top" constant="18" id="hIp-6p-4sA"/>
+                                    <constraint firstAttribute="trailing" secondItem="lhT-Q8-sIj" secondAttribute="trailing" constant="34" id="kgX-eH-WTj"/>
                                     <constraint firstAttribute="height" constant="50" id="lBo-Ta-2hZ"/>
                                 </constraints>
                             </view>
@@ -115,11 +145,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="564.5" y="476.5"/>
+            <point key="canvasLocation" x="623.5" y="547.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="297" width="120" height="120"/>
         <image name="bg" width="1920" height="1200"/>
+        <image name="musicButton" width="600" height="600"/>
     </resources>
 </document>
