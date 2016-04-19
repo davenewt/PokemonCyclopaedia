@@ -1,0 +1,6 @@
+framework module Pods_PokemonCyclopaedia {
+  umbrella header "Pods-PokemonCyclopaedia-umbrella.h"
+
+  export *
+  module * { export * }
+}

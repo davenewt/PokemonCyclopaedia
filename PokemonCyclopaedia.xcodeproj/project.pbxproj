@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C7B49E3F14E89D447A1103D /* Pods_PokemonCyclopaedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8E9CD99410766815D7E0091 /* Pods_PokemonCyclopaedia.framework */; };
 		63049E031CC151DD00D6EDF7 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 63049E021CC151DD00D6EDF7 /* music.mp3 */; };
 		632D2EF11CC129C700D12741 /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = 632D2EF01CC129C700D12741 /* pokemon.csv */; };
 		632D2EF41CC12AAD00D12741 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632D2EF31CC12AAD00D12741 /* Pokemon.swift */; };
@@ -20,6 +21,7 @@
 		63A95A1A1CC127E900E7EB5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63A95A191CC127E900E7EB5E /* Assets.xcassets */; };
 		63A95A1D1CC127E900E7EB5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63A95A1B1CC127E900E7EB5E /* LaunchScreen.storyboard */; };
 		63D30E531CC62C8B003A4C7D /* PokemonDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D30E521CC62C8B003A4C7D /* PokemonDetailVC.swift */; };
+		63D30E561CC6486C003A4C7D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D30E551CC6486C003A4C7D /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,10 @@
 		63A95A1C1CC127E900E7EB5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63A95A1E1CC127E900E7EB5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63D30E521CC62C8B003A4C7D /* PokemonDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonDetailVC.swift; sourceTree = "<group>"; };
+		63D30E551CC6486C003A4C7D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8D638C080CBD32091EA9D1CA /* Pods-PokemonCyclopaedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokemonCyclopaedia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PokemonCyclopaedia/Pods-PokemonCyclopaedia.debug.xcconfig"; sourceTree = "<group>"; };
+		ADA784BD848073C3F587696A /* Pods-PokemonCyclopaedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokemonCyclopaedia.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokemonCyclopaedia/Pods-PokemonCyclopaedia.release.xcconfig"; sourceTree = "<group>"; };
+		B8E9CD99410766815D7E0091 /* Pods_PokemonCyclopaedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokemonCyclopaedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C7B49E3F14E89D447A1103D /* Pods_PokemonCyclopaedia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +98,8 @@
 			children = (
 				63A95A0E1CC127E900E7EB5E /* PokemonCyclopaedia */,
 				63A95A0D1CC127E900E7EB5E /* Products */,
+				670772B69F8916DAE34A5D37 /* Pods */,
+				8D0C8445BDAEDD1BD74BA2D7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,19 +114,45 @@
 		63A95A0E1CC127E900E7EB5E /* PokemonCyclopaedia */ = {
 			isa = PBXGroup;
 			children = (
+				63D30E541CC64858003A4C7D /* Util */,
 				632D2EF21CC12AA000D12741 /* Model */,
 				632D2EF51CC12FE100D12741 /* View */,
 				632D2EFA1CC137BA00D12741 /* Controller */,
 				632D2EFB1CC137CD00D12741 /* Resources */,
 				63A95A0F1CC127E900E7EB5E /* AppDelegate.swift */,
 				63A95A131CC127E900E7EB5E /* Main.storyboard */,
-				632D2EF81CC1379800D12741 /* csv.swift */,
 				63A95A191CC127E900E7EB5E /* Assets.xcassets */,
 				63A95A1B1CC127E900E7EB5E /* LaunchScreen.storyboard */,
 				63A95A1E1CC127E900E7EB5E /* Info.plist */,
 				63A95A161CC127E900E7EB5E /* PokemonCyclopaedia.xcdatamodeld */,
 			);
 			path = PokemonCyclopaedia;
+			sourceTree = "<group>";
+		};
+		63D30E541CC64858003A4C7D /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				632D2EF81CC1379800D12741 /* csv.swift */,
+				63D30E551CC6486C003A4C7D /* Constants.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		670772B69F8916DAE34A5D37 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8D638C080CBD32091EA9D1CA /* Pods-PokemonCyclopaedia.debug.xcconfig */,
+				ADA784BD848073C3F587696A /* Pods-PokemonCyclopaedia.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8D0C8445BDAEDD1BD74BA2D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B8E9CD99410766815D7E0091 /* Pods_PokemonCyclopaedia.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,9 +162,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63A95A211CC127E900E7EB5E /* Build configuration list for PBXNativeTarget "PokemonCyclopaedia" */;
 			buildPhases = (
+				850CFB2CDC5025D94330BC78 /* Check Pods Manifest.lock */,
 				63A95A081CC127E800E7EB5E /* Sources */,
 				63A95A091CC127E800E7EB5E /* Frameworks */,
 				63A95A0A1CC127E800E7EB5E /* Resources */,
+				BDDD4EE3F560B27EBEB17734 /* Embed Pods Frameworks */,
+				F7F0F272C631F533E725DD4E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -190,6 +228,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		850CFB2CDC5025D94330BC78 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BDDD4EE3F560B27EBEB17734 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PokemonCyclopaedia/Pods-PokemonCyclopaedia-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7F0F272C631F533E725DD4E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PokemonCyclopaedia/Pods-PokemonCyclopaedia-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		63A95A081CC127E800E7EB5E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -202,6 +288,7 @@
 				63D30E531CC62C8B003A4C7D /* PokemonDetailVC.swift in Sources */,
 				63A95A101CC127E900E7EB5E /* AppDelegate.swift in Sources */,
 				632D2EF71CC1302800D12741 /* PokeCell.swift in Sources */,
+				63D30E561CC6486C003A4C7D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +401,7 @@
 		};
 		63A95A221CC127E900E7EB5E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D638C080CBD32091EA9D1CA /* Pods-PokemonCyclopaedia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PokemonCyclopaedia/Info.plist;
@@ -325,6 +413,7 @@
 		};
 		63A95A231CC127E900E7EB5E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADA784BD848073C3F587696A /* Pods-PokemonCyclopaedia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PokemonCyclopaedia/Info.plist;

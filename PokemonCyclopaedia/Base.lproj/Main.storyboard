@@ -183,23 +183,34 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zs-vp-ME7">
-                                        <rect key="frame" x="8" y="6" width="33" height="38"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zs-vp-ME7">
+                                        <rect key="frame" x="18" y="14" width="25" height="28"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="38" id="MEc-O1-dJG"/>
-                                            <constraint firstAttribute="width" constant="33" id="oEi-qJ-M2I"/>
+                                            <constraint firstAttribute="height" constant="28" id="MEc-O1-dJG"/>
+                                            <constraint firstAttribute="width" constant="25" id="oEi-qJ-M2I"/>
                                         </constraints>
                                         <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="backBtnPressed:" destination="NyR-cB-SMo" eventType="touchUpInside" id="QVk-hL-dZy"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="Vtr-lD-x5v" firstAttribute="top" secondItem="eI8-KB-Xbt" secondAttribute="top" constant="14" id="0yw-3P-K2l"/>
+                                    <constraint firstItem="4zs-vp-ME7" firstAttribute="leading" secondItem="eI8-KB-Xbt" secondAttribute="leading" constant="18" id="7F0-QY-gNH"/>
+                                    <constraint firstAttribute="bottom" secondItem="4zs-vp-ME7" secondAttribute="bottom" constant="6" id="Bd8-En-tsA"/>
                                     <constraint firstItem="4zs-vp-ME7" firstAttribute="leading" secondItem="eI8-KB-Xbt" secondAttribute="leading" constant="8" id="E6p-qJ-p6i"/>
                                     <constraint firstAttribute="height" constant="50" id="Jg4-QN-652"/>
                                     <constraint firstItem="4zs-vp-ME7" firstAttribute="top" secondItem="eI8-KB-Xbt" secondAttribute="top" constant="6" id="TMX-y0-e2v"/>
                                     <constraint firstItem="Vtr-lD-x5v" firstAttribute="centerX" secondItem="eI8-KB-Xbt" secondAttribute="centerX" id="aek-jz-z1Q"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="E6p-qJ-p6i"/>
+                                        <exclude reference="TMX-y0-e2v"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="etp-Sd-s93">
                                 <rect key="frame" x="0.0" y="496" width="375" height="31"/>
@@ -223,10 +234,10 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hn2-mB-me7">
                                 <rect key="frame" x="16" y="537" width="343" height="120"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="101" translatesAutoresizingMaskIntoConstraints="NO" id="S2n-LB-v33">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="101" translatesAutoresizingMaskIntoConstraints="NO" id="S2n-LB-v33">
                                         <rect key="frame" x="0.0" y="0.0" width="162" height="120"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="189" translatesAutoresizingMaskIntoConstraints="NO" id="M9j-UY-RVF">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="189" translatesAutoresizingMaskIntoConstraints="NO" id="M9j-UY-RVF">
                                         <rect key="frame" x="182" y="0.0" width="161" height="120"/>
                                     </imageView>
                                 </subviews>
@@ -445,7 +456,18 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="attackLbl" destination="d21-hd-0WZ" id="mqj-tB-vzt"/>
+                        <outlet property="currentEvoImg" destination="S2n-LB-v33" id="dYO-U2-NdL"/>
+                        <outlet property="defenseLbl" destination="8RL-mK-PGF" id="kZo-QI-JhJ"/>
+                        <outlet property="descriptionLbl" destination="B02-Eh-X44" id="ZFz-dc-sWV"/>
+                        <outlet property="evoTitleLbl" destination="cRS-sy-BAl" id="Zi9-gY-h2Z"/>
+                        <outlet property="heightLbl" destination="2yX-8Y-SjA" id="WNn-Sz-K1K"/>
+                        <outlet property="idLbl" destination="HvI-pG-cnj" id="h2J-2y-kSe"/>
+                        <outlet property="mainImg" destination="1hg-Ww-DPE" id="T1V-gM-z7h"/>
                         <outlet property="nameLbl" destination="Vtr-lD-x5v" id="3JH-ld-x7C"/>
+                        <outlet property="nextEvoImg" destination="M9j-UY-RVF" id="oPx-qu-XfC"/>
+                        <outlet property="typeLbl" destination="BDc-In-alg" id="VX1-yV-p33"/>
+                        <outlet property="weightLbl" destination="o63-qx-YkI" id="el8-Mf-Hk8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="msW-Qn-sdK" userLabel="First Responder" sceneMemberID="firstResponder"/>
