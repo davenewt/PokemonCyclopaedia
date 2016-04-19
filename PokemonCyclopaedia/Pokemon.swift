@@ -36,6 +36,89 @@ class Pokemon {
         }
     }
     
+    // not possible for name or pokedexId to be nil, because we declare them at init time (see further down). However, for other values, we should deal with what happens if they ARE nil... so...
+    
+    var description: String {
+        get {
+            if _description == nil {
+                _description = ""
+            }
+            return _description
+        }
+    }
+    
+    var type: String {
+        get {
+            if _type == nil {
+                _type = ""
+            }
+            return _type
+        }
+    }
+    
+    var defense: String {
+        get {
+            if _defense == nil {
+                _defense = ""
+            }
+            return _defense
+        }
+    }
+    
+    var height: String {
+        get {
+            if _height == nil {
+                _height = ""
+            }
+            return _height
+        }
+    }
+
+    var weight: String {
+        get {
+            if _weight == nil {
+                _weight = ""
+            }
+            return _weight
+        }
+    }
+    
+    var attack: String {
+        get {
+            if _attack == nil {
+                _attack = ""
+            }
+            return _attack
+        }
+    }
+    
+    var evoTxt: String {
+        get {
+            if _evoTxt == nil {
+                _evoTxt = ""
+            }
+            return _evoTxt
+        }
+    }
+    
+    var evoId: String {
+        get {
+            if _evoId == nil {
+                _evoId = ""
+            }
+            return _evoId
+        }
+    }
+    
+    var evoLevel: String {
+        get {
+            if _evoLevel == nil {
+                _evoLevel = ""
+            }
+            return _evoLevel
+        }
+    }
+    
     init(name: String, pokedexId: Int) {
         self._name = name
         self._pokedexId = pokedexId
@@ -118,7 +201,7 @@ class Pokemon {
                                 
                             }
                             
-                            completed()
+                            completed() // this signals we have finished downloading, and takes us back into PokemonDetailVC.swift, see 32min in https://www.udemy.com/ios9-swift/learn/v4/t/lecture/3450386
                             
                         }
                     }
@@ -126,7 +209,8 @@ class Pokemon {
                 } else {
                     self._description = "NO DESCRIPTION? DO WE EVER GET HERE?"
                 }
-                print("Selected Poké Description outside of closure always returns nil, look!: \(self._description)") // this returns nil, but inside the closure, above, we get the description OK. Seems odd that for getting the TYPE, further above, printing the returned value outside the closure works OK, but it doesn't work in this case? Why is this?
+//                print("Selected Poké Description outside of closure always returns nil, look!: \(self._description)")
+                // this returns nil, but inside the closure, above, we get the description OK. THIS IS BECAUSE requests are ASYNCHRONOUS! See 24min in https://www.udemy.com/ios9-swift/learn/v4/t/lecture/3450386
                 
                 
                 
