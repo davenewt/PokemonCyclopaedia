@@ -19,6 +19,7 @@
 		63A95A181CC127E900E7EB5E /* PokemonCyclopaedia.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 63A95A161CC127E900E7EB5E /* PokemonCyclopaedia.xcdatamodeld */; };
 		63A95A1A1CC127E900E7EB5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63A95A191CC127E900E7EB5E /* Assets.xcassets */; };
 		63A95A1D1CC127E900E7EB5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63A95A1B1CC127E900E7EB5E /* LaunchScreen.storyboard */; };
+		63D30E531CC62C8B003A4C7D /* PokemonDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D30E521CC62C8B003A4C7D /* PokemonDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		63A95A191CC127E900E7EB5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63A95A1C1CC127E900E7EB5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63A95A1E1CC127E900E7EB5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63D30E521CC62C8B003A4C7D /* PokemonDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				63A95A111CC127E900E7EB5E /* ViewController.swift */,
+				63D30E521CC62C8B003A4C7D /* PokemonDetailVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				63A95A121CC127E900E7EB5E /* ViewController.swift in Sources */,
 				632D2EF41CC12AAD00D12741 /* Pokemon.swift in Sources */,
 				63A95A181CC127E900E7EB5E /* PokemonCyclopaedia.xcdatamodeld in Sources */,
+				63D30E531CC62C8B003A4C7D /* PokemonDetailVC.swift in Sources */,
 				63A95A101CC127E900E7EB5E /* AppDelegate.swift in Sources */,
 				632D2EF71CC1302800D12741 /* PokeCell.swift in Sources */,
 			);
